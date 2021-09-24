@@ -1,11 +1,11 @@
 <template>
 
-    <li class="file" >
+    <li class="file">
       <i class="fas fa-file-image" v-if="type == 'image/svg' || type == 'image/jpeg' || type == 'image/png'"></i> 
       <i class="fas fa-file-alt" v-if="type == 'application/octet-stream' || type == 'text/plain'"></i> 
       <i class="fas fa-file-code" v-if="type == 'application/javascript' || type == 'application/json'"></i> 
       
-      {{name}} {{type}}
+      {{name}}
     </li>
 
 </template>
@@ -16,7 +16,6 @@ export default {
   props: {
     name: String,
     type: String,
-    visible: Boolean,
   }
 }
 </script>
@@ -26,13 +25,5 @@ export default {
   color: green;
   margin-left: 50px;
 }
-.files{
-  margin-left: 50px;
-}
-// .border .file:nth-child(n+4):nth-child(-n+8) {
-//   margin-left:150px;
-// }
-// .border .file:nth-child(n+8) {
-//   margin-left:100px;
-// }
+
 </style>

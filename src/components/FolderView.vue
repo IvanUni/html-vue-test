@@ -22,7 +22,6 @@ export default {
     folders:Array,
     files:Array,
     type: String,
-    visible: Boolean,
   },
   data(){
     return {
@@ -34,18 +33,40 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.folder{
-  color: orangered;
+
+.fold li:hover {border-left: 10px solid transparent;}
+.fold .file {border-left: 10px solid green;}
+.fold .folder {border-left: 10px solid orangered;}
+.fold .file:hover {border-right: 10px solid green;}
+.fold .folder:hover {border-right: 10px solid orangered;}
+.fold li {
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 10px solid #f05d22; 
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+            -2px -2px 5px 0 rgba(0,0,0,.1),
+        2px 2px 5px 0 rgba(0,0,0,.1),
+        -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.1s all linear;
 }
 
-
+.folder{
+    color: orangered;
+}
 .fold:nth-child(2){
-  margin-left: 50px;
+    margin-left: 50px;
 }
 .fold:nth-child(3){
-  margin-left: 50px;
+    margin-left: 50px;
 }
-
-
-
+.fold {
+    border-left: 1px dotted lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 </style>
